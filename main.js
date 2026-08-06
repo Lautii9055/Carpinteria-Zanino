@@ -185,6 +185,21 @@ revealEls.forEach((el, i) => {
   observer.observe(el);
 });
 
+// Scroll-to-top button
+const scrollTopBtn = document.getElementById('scrollTop');
+
+if (scrollTopBtn) {
+  const toggleScrollTop = () => {
+    scrollTopBtn.classList.toggle('show', window.scrollY > 600);
+  };
+
+  window.addEventListener('scroll', toggleScrollTop, { passive: true });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  toggleScrollTop();
+}
+
 // Contact form
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');

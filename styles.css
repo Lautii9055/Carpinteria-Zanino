@@ -114,6 +114,41 @@ button {
   transition: background 0.2s, transform 0.2s;
 }
 
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--wood);
+  color: var(--bg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+}
+
+.scroll-top:hover {
+  background: var(--wood-dark);
+  transform: translateY(-2px);
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top svg {
+  width: 20px;
+  height: 20px;
+}
+
 .btn-primary:hover {
   background: var(--wood-dark);
   transform: translateY(-1px);
@@ -933,6 +968,11 @@ button {
   align-items: start;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-info p {
   font-size: 15px;
   color: var(--text-muted);
@@ -954,11 +994,13 @@ button {
   padding: 20px 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
-a.channel:hover {
+.channel:hover,
+.channel.no-link:hover {
   border-color: var(--wood);
+  transform: translateY(-2px);
 }
 
 .channel img,
@@ -990,6 +1032,7 @@ a.channel:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 48px;
+  margin-top: clamp(4.2rem, 8vw, 7.2rem);
 }
 
 .form-row {
@@ -1232,6 +1275,7 @@ a.channel:hover {
 
   .contact-form-wrap {
     padding: 28px 20px;
+    margin-top: 0;
   }
 
   .form-row {
