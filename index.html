@@ -1,53 +1,121 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zanino — Carpintería a Medida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zanino | Carpintería y muebles a medida en Zona Norte — Beccar</title>
+  <meta name="description" content="Carpintería familiar con más de 30 años de oficio. Diseñamos, fabricamos en nuestro taller de Beccar e instalamos cocinas, vestidores, placares y muebles a medida en San Isidro, Nordelta, El Talar y Zona Norte." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f0e0c" />
+  <!-- Cuando haya dominio: agregar <link rel="canonical" href="https://DOMINIO/"> y usar URLs absolutas en og:image / og:url -->
+
+  <!-- Open Graph (vista previa al compartir en WhatsApp, Facebook, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:site_name" content="Zanino Carpintería" />
+  <meta property="og:title" content="Zanino | Carpintería y muebles a medida en Zona Norte" />
+  <meta property="og:description" content="Cocinas, vestidores, placares y muebles a medida. Taller propio en Beccar, más de 30 años de oficio." />
+  <meta property="og:image" content="img/og-zanino.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230f0e0c'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='62' fill='%23c8955a' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preload" as="image" href="img/hero-living-madera.webp" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Datos estructurados: ayudan a Google a entender que es un negocio local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Zanino Carpintería",
+    "description": "Carpintería familiar de muebles a medida: cocinas, vestidores, placares, bibliotecas, muebles de baño y oficinas. Diseño, fabricación propia e instalación.",
+    "image": "img/og-zanino.jpg",
+    "telephone": "+54 9 11 5156-7030",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beccar",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Beccar" },
+      { "@type": "Place", "name": "San Isidro" },
+      { "@type": "Place", "name": "Nordelta" },
+      { "@type": "Place", "name": "El Talar" },
+      { "@type": "Place", "name": "Zona Norte, Gran Buenos Aires" }
+    ],
+    "knowsAbout": ["Muebles a medida", "Cocinas a medida", "Vestidores", "Placares", "Bibliotecas", "Vanitorys", "Muebles de oficina"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿En qué zonas trabajan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nuestro taller está en Beccar y trabajamos principalmente en San Isidro, Nordelta, El Talar y el resto de Zona Norte." } },
+      { "@type": "Question", "name": "¿Fabrican ustedes los muebles?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Todo se fabrica en nuestro taller propio, y la instalación también la hacemos nosotros." } },
+      { "@type": "Question", "name": "¿Cómo pido un presupuesto?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Escribinos por WhatsApp o completá el formulario con lo que necesitás, tu zona y, si podés, fotos o medidas aproximadas del espacio." } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
   <!-- NAV -->
-  <nav id="navbar">
-    <a href="#inicio" class="nav-logo">ZANINO</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+  <header id="navbar">
+    <a href="#inicio" class="nav-logo" aria-label="Zanino Carpintería — inicio">ZANINO</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#materiales">Materiales</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto" class="nav-cta">Pedí tu presupuesto</a></li>
-    </ul>
-  </nav>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Trabajos</a></li>
+        <li><a href="#zonas">Zonas</a></li>
+        <li><a href="#contacto" class="nav-cta">Pedí tu presupuesto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
 
   <!-- HERO -->
-  <section id="inicio" class="hero">
+  <section id="inicio" class="hero" aria-labelledby="hero-title">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1800&q=80" alt="Taller de carpintería" class="hero-img" />
+      <img src="img/hero-living-madera.webp" width="1600" height="900" fetchpriority="high"
+           alt="Living con rack de madera, hogar y bibliotecas iluminadas fabricado por Zanino" class="hero-img" />
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Carpintería a medida · Buenos Aires</p>
-      <h1 class="hero-title">Cada espacio<br/><em>merece</em> su mueble.</h1>
-      <p class="hero-sub">Diseñamos y fabricamos piezas únicas que se adaptan a tu vida, no al revés.</p>
+      <p class="hero-eyebrow">Carpintería a medida · Beccar, Zona Norte</p>
+      <h1 class="hero-title" id="hero-title">Cada espacio<br/><em>merece</em> su mueble.</h1>
+      <p class="hero-sub">Diseñamos, fabricamos en nuestro taller de Beccar e instalamos muebles a medida en San Isidro, Nordelta y toda Zona Norte.</p>
       <div class="hero-actions">
-        <a href="#proyectos" class="btn-primary">Ver nuestros trabajos</a>
-        <a href="#contacto" class="btn-ghost">Consultar presupuesto</a>
+        <a href="https://wa.me/5491151567030?text=Hola%20Zanino%2C%20quiero%20consultar%20por%20un%20mueble%20a%20medida." class="btn-primary" target="_blank" rel="noopener">Pedí presupuesto por WhatsApp</a>
+        <a href="#proyectos" class="btn-ghost">Ver nuestros trabajos</a>
       </div>
     </div>
-    <div class="hero-scroll">
+    <div class="hero-scroll" aria-hidden="true">
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- MANIFIESTO -->
-  <section class="manifesto">
+  <section class="manifesto" aria-label="Nuestra filosofía">
     <div class="container">
       <p class="manifesto-text">
         Un mueble a medida no es un lujo. Es la diferencia entre vivir <em>en</em> tu casa y vivir <em>con</em> tu casa.
@@ -56,10 +124,11 @@
   </section>
 
   <!-- NOSOTROS -->
-  <section id="nosotros" class="about">
+  <section id="nosotros" class="about" aria-labelledby="nosotros-title">
     <div class="container about-grid">
       <div class="about-img-wrap">
-        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=80" alt="Cocina a medida" />
+        <img src="img/nosotros-cocina-blanca-isla.webp" width="900" height="1200" loading="lazy"
+             alt="Cocina blanca con isla y anafe fabricada por Zanino" />
         <div class="about-badge">
           <span class="badge-num">+30</span>
           <span class="badge-text">años de oficio</span>
@@ -67,35 +136,36 @@
       </div>
       <div class="about-text">
         <p class="section-eyebrow">Quiénes somos</p>
-        <h2 class="section-title">Una familia.<br/>Un apellido.<br/>Un oficio.</h2>
-        <p>Zanino nació del taller de un carpintero que creía que cada mueble debía contar una historia. Más de dos décadas después, seguimos trabajando con las mismas manos, el mismo criterio y el mismo compromiso con quien confía en nosotros.</p>
+        <h2 class="section-title" id="nosotros-title">Una familia.<br/>Un apellido.<br/>Un oficio.</h2>
+        <p>Zanino nació del taller de un carpintero que creía que cada mueble debía contar una historia. Más de 30 años después, seguimos trabajando desde nuestro taller en Beccar con las mismas manos, el mismo criterio y el mismo compromiso con quien confía en nosotros.</p>
         <p>No fabricamos en serie. Cada proyecto empieza con una conversación: entendemos tu espacio, tu gusto y tu vida cotidiana, y desde ahí diseñamos una pieza que encaja perfectamente — en medidas, en estilo y en tiempo.</p>
-        <div class="about-stats">
-          <div class="stat">
+        <ul class="about-stats" aria-label="Zanino en números">
+          <li class="stat">
             <span class="stat-num">+450</span>
             <span class="stat-label">proyectos realizados</span>
-          </div>
-          <div class="stat">
+          </li>
+          <li class="stat">
             <span class="stat-num">100%</span>
             <span class="stat-label">fabricación propia</span>
-          </div>
-          <div class="stat">
+          </li>
+          <li class="stat">
             <span class="stat-num">2</span>
             <span class="stat-label">generaciones de oficio</span>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
+    </div>
   </section>
 
   <!-- SERVICIOS -->
-  <section id="servicios" class="services">
+  <section id="servicios" class="services" aria-labelledby="servicios-title">
     <div class="container">
       <p class="section-eyebrow center">Lo que hacemos</p>
-      <h2 class="section-title center">Todo lo que tu hogar<br/>necesita, a medida.</h2>
+      <h2 class="section-title center" id="servicios-title">Todo lo que tu hogar<br/>necesita, a medida.</h2>
       <div class="services-grid">
-        <div class="service-card">
+        <article class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <rect x="4" y="10" width="40" height="28" rx="1" stroke="currentColor" stroke-width="1.5"/>
               <path d="M4 18h40" stroke="currentColor" stroke-width="1.5"/>
               <path d="M16 10v28" stroke="currentColor" stroke-width="1.5"/>
@@ -103,11 +173,11 @@
             </svg>
           </div>
           <h3>Cocinas</h3>
-          <p>Módulos, mesadas, alacenas y peninsulas diseñados para tu distribución exacta y tu forma de cocinar.</p>
-        </div>
-        <div class="service-card">
+          <p>Módulos, mesadas, alacenas y penínsulas diseñados para tu distribución exacta y tu forma de cocinar.</p>
+        </article>
+        <article class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <rect x="6" y="6" width="36" height="36" rx="1" stroke="currentColor" stroke-width="1.5"/>
               <path d="M6 20h36" stroke="currentColor" stroke-width="1.5"/>
               <path d="M6 34h36" stroke="currentColor" stroke-width="1.5"/>
@@ -117,10 +187,10 @@
           </div>
           <h3>Placares y vestidores</h3>
           <p>Organizamos cada centímetro de tu espacio con soluciones inteligentes, puertas corredizas, cajones y accesorios de primera.</p>
-        </div>
-        <div class="service-card">
+        </article>
+        <article class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <rect x="8" y="10" width="32" height="24" rx="1" stroke="currentColor" stroke-width="1.5"/>
               <path d="M14 16h20" stroke="currentColor" stroke-width="1.5"/>
               <path d="M14 22h20" stroke="currentColor" stroke-width="1.5"/>
@@ -130,10 +200,10 @@
           </div>
           <h3>Living y comedor</h3>
           <p>Mesas, racks, bibliotecas, aparadores y buffets que transforman el corazón de tu hogar.</p>
-        </div>
-        <div class="service-card">
+        </article>
+        <article class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <rect x="12" y="8" width="24" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
               <path d="M16 18h16" stroke="currentColor" stroke-width="1.5"/>
               <path d="M18 8v6" stroke="currentColor" stroke-width="1.5"/>
@@ -143,10 +213,10 @@
           </div>
           <h3>Muebles de baño</h3>
           <p>Vanitorios, columnas y módulos con materiales resistentes a la humedad y terminaciones impecables.</p>
-        </div>
-        <div class="service-card">
+        </article>
+        <article class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path d="M10 22h28" stroke="currentColor" stroke-width="1.5"/>
               <path d="M12 22v10h24V22" stroke="currentColor" stroke-width="1.5"/>
               <path d="M16 20v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4" stroke="currentColor" stroke-width="1.5"/>
@@ -156,10 +226,10 @@
           </div>
           <h3>Dormitorios</h3>
           <p>Cabeceras, mesas de luz, cajoneras y escritorios que convierten tu cuarto en un espacio personal único.</p>
-        </div>
-        <div class="service-card">
+        </article>
+        <article class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <rect x="8" y="10" width="32" height="28" rx="1" stroke="currentColor" stroke-width="1.5"/>
               <path d="M8 20h32" stroke="currentColor" stroke-width="1.5"/>
               <path d="M16 20v18" stroke="currentColor" stroke-width="1.5"/>
@@ -169,210 +239,214 @@
           </div>
           <h3>Locales y oficinas</h3>
           <p>Mostradores, estanterías, recepciones y mobiliario comercial pensado para tu negocio.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- PROCESO -->
-  <section class="process">
+  <section class="process" aria-labelledby="proceso-title">
     <div class="container">
       <p class="section-eyebrow center">Cómo trabajamos</p>
-      <h2 class="section-title center">De la idea a tu casa,<br/>sin sorpresas.</h2>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-line"></div>
+      <h2 class="section-title center" id="proceso-title">De la idea a tu casa,<br/>sin sorpresas.</h2>
+      <ol class="process-steps">
+        <li class="process-step">
+          <div class="step-line" aria-hidden="true"></div>
           <div class="step-content">
             <span class="step-label">Paso 01</span>
             <h3>Consulta inicial</h3>
-            <p>Nos contás qué necesitás, mandás fotos o medidas del espacio, y coordinamos una visita sin costo.</p>
+            <p>Nos contás qué necesitás, mandás fotos o medidas del espacio, y coordinamos una visita.</p>
           </div>
-        </div>
-        <div class="process-step">
-          <div class="step-line"></div>
+        </li>
+        <li class="process-step">
+          <div class="step-line" aria-hidden="true"></div>
           <div class="step-content">
             <span class="step-label">Paso 02</span>
             <h3>Diseño y presupuesto</h3>
             <p>Elaboramos una propuesta con planos, materiales y un presupuesto detallado. Sin letra chica.</p>
           </div>
-        </div>
-        <div class="process-step">
-          <div class="step-line"></div>
+        </li>
+        <li class="process-step">
+          <div class="step-line" aria-hidden="true"></div>
           <div class="step-content">
             <span class="step-label">Paso 03</span>
             <h3>Fabricación en taller</h3>
-            <p>Producción 100% propia con control de calidad en cada etapa. Te mantenemos informado del avance.</p>
+            <p>Producción 100% propia en nuestro taller de Beccar, con control de calidad en cada etapa. Te mantenemos informado del avance.</p>
           </div>
-        </div>
-        <div class="process-step">
-          <div class="step-line"></div>
+        </li>
+        <li class="process-step">
+          <div class="step-line" aria-hidden="true"></div>
           <div class="step-content">
             <span class="step-label">Paso 04</span>
             <h3>Entrega e instalación</h3>
             <p>Instalamos nosotros. Nos vamos cuando el resultado es exactamente lo que acordamos.</p>
           </div>
-        </div>
-      </div>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- MATERIALES -->
-  <section id="materiales" class="materials">
+  <section id="materiales" class="materials" aria-labelledby="materiales-title">
     <div class="container">
       <p class="section-eyebrow center">Con qué trabajamos</p>
-      <h2 class="section-title center">Materiales que duran,<br/>marcas que respaldan.</h2>
+      <h2 class="section-title center" id="materiales-title">Materiales que duran,<br/>marcas que respaldan.</h2>
       <div class="materials-grid">
-        <div class="material-card">
+        <article class="material-card">
           <div class="material-img">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Madera maciza" />
+            <img src="img/material-madera-maciza.webp" width="600" height="600" loading="lazy" alt="Banco de madera maciza sobre base de piedra" />
           </div>
           <div class="material-info">
             <h3>Madera maciza</h3>
-            <p>Paraíso, cedro, roble y pitiribí seleccionados por su veta, resistencia y belleza natural.</p>
+            <p>Paraíso, cedro, roble y peteribí seleccionados por su veta, resistencia y belleza natural.</p>
           </div>
-        </div>
-        <div class="material-card">
+        </article>
+        <article class="material-card">
           <div class="material-img">
-            <img src="https://images.unsplash.com/photo-1615529162924-f8605388461d?w=600&q=80" alt="Melamina" />
+            <img src="img/material-melamina.webp" width="600" height="600" loading="lazy" alt="Escritorio de oficina en melamina símil madera" />
           </div>
           <div class="material-info">
             <h3>Melamina de alta presión</h3>
             <p>Tableros Faplac y Egger en todos los espesores. Amplia gama de colores y texturas.</p>
           </div>
-        </div>
-        <div class="material-card">
+        </article>
+        <article class="material-card">
           <div class="material-img">
-            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="Herrajes" />
+            <img src="img/material-herrajes.webp" width="600" height="600" loading="lazy" alt="Vestidor con cajones y estantes iluminados" />
           </div>
           <div class="material-info">
             <h3>Herrajes premium</h3>
             <p>Bisagras y correderas Blum, Eurohard y Häfele. Los mecanismos que garantizan décadas de uso cotidiano.</p>
           </div>
-        </div>
-        <div class="material-card">
+        </article>
+        <article class="material-card">
           <div class="material-img">
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" alt="Lacados y terminaciones" />
+            <img src="img/material-lacados.webp" width="600" height="600" loading="lazy" alt="Muebles de cocina con terminación laqueada verde salvia" />
           </div>
           <div class="material-info">
             <h3>Lacados y terminaciones</h3>
             <p>Terminaciones lino, mate y brillante con pinturas Sherwin-Williams y Alba. Sin burbujas, sin imperfecciones.</p>
           </div>
-        </div>
+        </article>
       </div>
       <div class="brands-strip">
         <p class="brands-label">Marcas con las que trabajamos</p>
-        <div class="brands-list">
-          <span>Eurohard</span>
-          <span>Blum</span>
-          <span>Häfele</span>
-          <span>Sherwin-Williams</span>
-          <span>Alba</span>
-        </div>
+        <ul class="brands-list">
+          <li>Blum</li><li>Häfele</li><li>Eurohard</li><li>Faplac</li><li>Egger</li><li>Sherwin-Williams</li><li>Alba</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- PROYECTOS -->
-  <section id="proyectos" class="projects">
+  <section id="proyectos" class="projects" aria-labelledby="proyectos-title">
     <div class="container">
       <p class="section-eyebrow center">Nuestros trabajos</p>
-      <h2 class="section-title center">Algunos proyectos realizados.</h2>
+      <h2 class="section-title center" id="proyectos-title">Proyectos reales,<br/>hechos en nuestro taller.</h2>
+      <p class="projects-intro">Todas las fotos son de trabajos fabricados e instalados por nosotros. Tocá una imagen para verla en grande.</p>
     </div>
-    <div class="projects-filter">
-      <button class="filter-btn" data-filter="cocina">Cocinas</button>
-      <button class="filter-btn" data-filter="placard">Placares</button>
-      <button class="filter-btn" data-filter="living">Living</button>
-      <button class="filter-btn" data-filter="bano">Baños</button>
-      <button class="filter-btn" data-filter="otros">Otros</button>
+    <div class="projects-filter" role="group" aria-label="Filtrar trabajos por tipo">
+      <button type="button" class="filter-btn" data-filter="all">Todos</button>
+      <button type="button" class="filter-btn" data-filter="cocina">Cocinas</button>
+      <button type="button" class="filter-btn" data-filter="living">Living</button>
+      <button type="button" class="filter-btn" data-filter="vestidor">Vestidores</button>
+      <button type="button" class="filter-btn" data-filter="placard">Placares</button>
+      <button type="button" class="filter-btn" data-filter="escritorio">Oficinas</button>
+      <button type="button" class="filter-btn" data-filter="bano">Baños</button>
+      <button type="button" class="filter-btn" data-filter="otros">Otros</button>
     </div>
-    <div class="projects-grid" id="projectsGrid"></div>
+    <p class="visually-hidden" id="filterStatus" aria-live="polite"></p>
+    <div class="projects-wrap">
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+    <noscript><p class="projects-intro">Activá JavaScript para ver la galería de trabajos.</p></noscript>
   </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="testimonials">
-    <div class="container">
-      <p class="section-eyebrow center">Lo que dicen</p>
-      <div class="testimonials-track" id="testimonialsTrack">
-        <div class="testimonial-slide active">
-          <blockquote>
-            "Zanino transformó nuestra cocina pequeña en el ambiente más funcional de la casa. Escucharon cada detalle y el resultado superó lo que imaginábamos."
-          </blockquote>
-          <cite>— Laura M., Palermo</cite>
-        </div>
-        <div class="testimonial-slide">
-          <blockquote>
-            "Contratamos a Zanino para el vestidor de nuestra habitación y quedamos encantados. Puntualidad, prolijidad y un trabajo que dura. No dudaríamos en volver a llamarlos."
-          </blockquote>
-          <cite>— Martín y Sol, San Isidro</cite>
-        </div>
-        <div class="testimonial-slide">
-          <blockquote>
-            "El nivel de detalle en los herrajes y las terminaciones es impresionante. Se nota que aman lo que hacen."
-          </blockquote>
-          <cite>— Gabriela F., Belgrano</cite>
-        </div>
+  <!-- ZONAS + PREGUNTAS -->
+  <section id="zonas" class="zones" aria-labelledby="zonas-title">
+    <div class="container zones-grid">
+      <div>
+        <p class="section-eyebrow">Dónde trabajamos</p>
+        <h2 class="section-title" id="zonas-title">Muebles a medida<br/>en <em>Zona Norte</em>.</h2>
+        <p class="zones-text">Nuestro taller está en Beccar. Desde ahí trabajamos principalmente en:</p>
+        <ul class="zones-list">
+          <li>Beccar</li>
+          <li>San Isidro</li>
+          <li>Nordelta</li>
+          <li>El Talar</li>
+          <li>Alrededores de Zona Norte</li>
+        </ul>
+        <p class="zones-note">¿Estás en otra zona? Escribinos igual y lo conversamos.</p>
       </div>
-      <div class="testimonial-dots" id="testimonialDots">
-        <button class="dot active" data-idx="0"></button>
-        <button class="dot" data-idx="1"></button>
-        <button class="dot" data-idx="2"></button>
+      <div class="faq">
+        <h3 class="faq-title">Preguntas frecuentes</h3>
+        <details>
+          <summary>¿Fabrican ustedes los muebles?</summary>
+          <p>Sí. Todo se fabrica en nuestro taller propio, y la instalación también la hacemos nosotros.</p>
+        </details>
+        <details>
+          <summary>¿Cómo pido un presupuesto?</summary>
+          <p>Escribinos por WhatsApp o completá el formulario con lo que necesitás, tu zona y, si podés, fotos o medidas aproximadas del espacio.</p>
+        </details>
+        <details>
+          <summary>¿Qué tipo de muebles hacen?</summary>
+          <p>Cocinas, vestidores, placares, racks y bibliotecas, muebles de baño, dormitorios, escritorios y mobiliario para locales y oficinas. Si lo que necesitás no está en la lista, consultanos.</p>
+        </details>
       </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="contact">
+  <section id="contacto" class="contact" aria-labelledby="contacto-title">
     <div class="container contact-grid">
       <div class="contact-info">
         <p class="section-eyebrow">Hablemos</p>
-        <h2 class="section-title">Contanos tu idea.<br/>Nosotros hacemos<br/>el resto.</h2>
+        <h2 class="section-title" id="contacto-title">Contanos tu idea.<br/>Nosotros hacemos<br/>el resto.</h2>
         <p>Desde una consulta rápida hasta un proyecto completo, estamos disponibles para escucharte y asesorarte sin compromiso.</p>
-        <div class="contact-channels">
-          <a href="tel:+5491551567030" class="channel">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11 11 0 0 0 3.4.5 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 3 3a1 1 0 0 1 1-1h2.8a1 1 0 0 1 1 1 11 11 0 0 0 .5 3.4 1 1 0 0 1-.2 1l-2.2 2.2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div>
-              <span class="channel-label">Teléfono / WhatsApp</span>
-              <span class="channel-value">+54 9 15 5156-7030</span>
+        <ul class="contact-channels">
+          <li>
+            <a href="https://wa.me/5491151567030" class="channel" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.7L4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 9.5c.3 1.8 1.7 3.4 3.6 4 .5.1 1-.2 1.3-.6l.3-.4-1.6-.9-.6.5a3.4 3.4 0 0 1-1.6-1.6l.5-.6-.9-1.6-.4.3c-.4.3-.6.8-.6 1.3Z" fill="currentColor"/></svg>
+              <div>
+                <span class="channel-label">WhatsApp</span>
+                <span class="channel-value">11 5156-7030</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+5491151567030" class="channel">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11 11 0 0 0 3.4.5 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 3 3a1 1 0 0 1 1-1h2.8a1 1 0 0 1 1 1 11 11 0 0 0 .5 3.4 1 1 0 0 1-.2 1l-2.2 2.2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <span class="channel-label">Teléfono</span>
+                <span class="channel-value">+54 9 11 5156-7030</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <div class="channel no-link">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4v-5H9v5H5a1 1 0 0 1-1-1v-8.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              <div>
+                <span class="channel-label">Taller</span>
+                <span class="channel-value">Beccar, San Isidro · Buenos Aires</span>
+              </div>
             </div>
-          </a>
-          <a href="mailto:contacto@zanino.com.ar" class="channel">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
-              <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div>
-              <span class="channel-label">Email</span>
-              <span class="channel-value">contacto@zanino.com.ar</span>
-            </div>
-          </a>
-          <div class="channel no-link">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4v-5H9v5H5a1 1 0 0 1-1-1v-8.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-            </svg>
-            <div>
-              <span class="channel-label">Taller</span>
-              <span class="channel-value">Buenos Aires, Argentina</span>
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div class="contact-form-wrap">
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" novalidate aria-describedby="formHelp">
+          <p class="form-help" id="formHelp">Completá los datos y se abre WhatsApp con tu consulta lista para enviar. Los campos con * son obligatorios.</p>
           <div class="form-row">
             <div class="form-field">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="nombre-error" />
+              <span class="form-error" id="nombre-error"></span>
             </div>
             <div class="form-field">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11..." />
+              <label for="zona">Localidad / barrio *</label>
+              <input type="text" id="zona" name="zona" autocomplete="address-level2" placeholder="Ej: San Isidro" required aria-describedby="zona-error" />
+              <span class="form-error" id="zona-error"></span>
             </div>
-          </div>
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
           </div>
           <div class="form-field">
             <label for="tipo">¿Qué necesitás?</label>
@@ -383,49 +457,67 @@
               <option>Living / Comedor</option>
               <option>Dormitorio</option>
               <option>Baño</option>
-              <option>Local / Oficina</option>
+              <option>Oficina / Escritorio</option>
+              <option>Local comercial</option>
               <option>Otro</option>
             </select>
           </div>
           <div class="form-field">
-            <label for="mensaje">Contanos tu proyecto</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describí el espacio, medidas aproximadas, estilo que te gusta..."></textarea>
+            <label for="mensaje">Contanos tu proyecto *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required aria-describedby="mensaje-error" placeholder="Describí el espacio, medidas aproximadas, estilo que te gusta..."></textarea>
+            <span class="form-error" id="mensaje-error"></span>
           </div>
-          <button type="submit" class="btn-primary full">Enviar consulta</button>
-          <div class="form-success" id="formSuccess">
-            <img src="../imagenes/otros/WhatsApp%20Image%202026-06-28%20at%2017.09.21%20(3).jpeg" alt="Consulta enviada" />
-            ¡Consulta enviada! Te respondemos en menos de 24 horas.
-          </div>
+          <button type="submit" class="btn-primary full">Enviar consulta por WhatsApp</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <p class="footer-logo">ZANINO</p>
-        <p class="footer-tagline">Carpintería a medida · Buenos Aires</p>
+        <p class="footer-tagline">Carpintería a medida · Beccar, Zona Norte</p>
       </div>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Navegación del pie de página">
         <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
         <a href="#materiales">Materiales</a>
-        <a href="#proyectos">Proyectos</a>
+        <a href="#proyectos">Trabajos</a>
+        <a href="#zonas">Zonas</a>
         <a href="#contacto">Contacto</a>
-      </div>
-      <p class="footer-copy">© 2025 Zanino. Todos los derechos reservados.</p>
+      </nav>
+      <p class="footer-copy">© <span id="year">2026</span> Zanino Carpintería. Todos los derechos reservados.</p>
+      <p class="footer-credit">Sitio web desarrollado por <a href="https://github.com/Lautii9055" target="_blank" rel="noopener">Lautaro Zanino</a></p>
     </div>
   </footer>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Botones flotantes -->
+  <a class="whatsapp-float" href="https://wa.me/5491151567030?text=Hola%20Zanino%2C%20quiero%20consultar%20por%20un%20mueble%20a%20medida." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.7L4 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9.5c.3 1.8 1.7 3.4 3.6 4 .5.1 1-.2 1.3-.6l.3-.4-1.6-.9-.6.5a3.4 3.4 0 0 1-1.6-1.6l.5-.6-.9-1.6-.4.3c-.4.3-.6.8-.6 1.3Z" fill="currentColor"/></svg>
+  </a>
+  <button class="scroll-top" id="scrollTop" type="button" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
       <path d="M12 19V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       <path d="m6 11 6-6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
 
-  <script src="main.js"></script>
+  <!-- Visor de fotos -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button type="button" class="lb-close" id="lbClose" aria-label="Cerrar">&times;</button>
+    <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Foto anterior">&#8249;</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Foto siguiente">&#8250;</button>
+  </div>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
